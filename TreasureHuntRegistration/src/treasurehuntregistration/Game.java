@@ -1,8 +1,23 @@
 package treasurehuntregistration;
 
-public class Game {
+import java.io.Serializable;
+
+public class Game implements Serializable {
     public String name;
-    public Integer maxOfPlayers;
+    public int maxOfPlayers;
+    public int currentRegisteredPlayers;
+
+    public Game() {
+
+    }
+
+    public int getMaxOfPlayers() {
+        return maxOfPlayers;
+    }
+
+    public void setMaxOfPlayers(int maxOfPlayers) {
+        this.maxOfPlayers = maxOfPlayers;
+    }
 
     public String getName() {
         return name;

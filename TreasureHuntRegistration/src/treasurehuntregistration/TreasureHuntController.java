@@ -3,13 +3,19 @@ package treasurehuntregistration;
 public class TreasureHuntController {
 
     //TODO: Wani
+    public void listOverviewGames(){
+        // Display Game database
+    }
+
+    //TODO: Wani
     public void listGamesRegistered(){
+        // Display player database
 
     }
 
     //TODO: Tom
     public void registerGame(){
-        //storeToRegisterFiles(number of players)
+        //cari game yang nak register, store to the player database, and update the game database (current registered players)
 
 
     }
@@ -17,7 +23,7 @@ public class TreasureHuntController {
 
     //TODO: Syaqil
     public void updateGame(){
-
+        // cari game registered, and update with the number of registered player.
     }
 
 
@@ -25,7 +31,8 @@ public class TreasureHuntController {
     public void
     unRegisterGame(Game game){
         // check kalau player tu ada registration with any games tak?
-        //Kalau ada, cari game tu dalam database.txt (which kau kene guna FileStore method)
+        // Cari Game registered tu, and then tolak with number of registered players and remove list from player database
+
 
     }
 

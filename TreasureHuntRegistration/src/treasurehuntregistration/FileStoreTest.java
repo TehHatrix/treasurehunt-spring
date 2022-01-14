@@ -7,6 +7,6 @@ public class FileStoreTest {
     public static void main(String[] args) {
         FileStore fs = FileStore.getInstance();
 
-        fs.test();
+        fs.getGameList();
     }
 }
