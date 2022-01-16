@@ -28,12 +28,17 @@ public class TreasureHuntController {
 
 
     //TODO: Syera
-    public void
-    unRegisterGame(Game game){
-        // check kalau player tu ada registration with any games tak?
-        // Cari Game registered tu, and then tolak with number of registered players and remove list from player database
-
-
+    public void unRegisterGame(Game game){
+        for (Game g : fs.getGameList().values()) {
+            if (g.id == game.id) {
+                game.currentRegisteredPlayers --;
+                fs.updateGame(game);
+                System.out.println("Updated current number of players in Game's Database to " + g.currentRegisteredPlayers);
+                fs.removePlayer(game.id);
+                System.out.println("Removed game ID of " + g.id + " from Player's Database.");
+            }   
+        } 
+        System.out.println();
     }
 
 }
