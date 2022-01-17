@@ -6,106 +6,20 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Commons Logging" level="project" />
+    <orderEntry type="library" name="Spring" level="project" />
+    <orderEntry type="library" name="spring-aop-5.2.9.RELEASE-javadoc" level="project" />
+    <orderEntry type="library" name="commons-logging-1.2-javadoc" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Commons Logging/commons-logging-1.2/commons-logging-1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../json-20211205.jar!/" />
         </CLASSES>
-        <JAVADOC>
-          <root url="jar://$MODULE_DIR$/../Commons Logging/commons-logging-1.2/commons-logging-1.2-javadoc.jar!/" />
-        </JAVADOC>
+        <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-aop-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-aspects-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-beans-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-context-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-context-indexer-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-context-support-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-core-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-expression-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-instrument-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-jcl-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-jdbc-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-jms-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-messaging-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-orm-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-oxm-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-r2dbc-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-test-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-tx-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-web-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-webflux-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-webmvc-5.3.9.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-websocket-5.3.9.jar!/" />
-        </CLASSES>
-        <JAVADOC>
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-aop-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-aspects-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-beans-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-context-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-context-indexer-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-context-support-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-core-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-expression-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-instrument-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-jcl-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-jdbc-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-jms-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-messaging-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-orm-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-oxm-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-r2dbc-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-test-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-tx-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-web-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-webflux-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-webmvc-5.3.9-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-websocket-5.3.9-javadoc.jar!/" />
-        </JAVADOC>
-        <SOURCES>
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-aop-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-aspects-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-beans-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-beans-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-context-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-context-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-context-indexer-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-context-support-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-core-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-core-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-expression-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-instrument-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-jcl-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-jdbc-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-jdbc-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-jms-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-messaging-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-messaging-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-orm-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-oxm-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-r2dbc-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-r2dbc-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-test-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-test-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-tx-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-tx-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-web-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-web-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-webflux-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-webflux-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-webmvc-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-webmvc-5.3.9-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../Spring Framework/libs/spring-websocket-5.3.9-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="libs" level="project" />
   </component>
 </module>

@@ -1,6 +1,9 @@
 package treasurehuntregistration;
 
+
 public class TreasureHuntController {
+
+    FileStore fs = FileStore.getInstance();
 
     //TODO: Wani
     public void listOverviewGames(){
@@ -22,8 +25,22 @@ public class TreasureHuntController {
 
 
     //TODO: Syaqil
-    public void updateGame(){
+    public void updateGame(Game game, int newNumOfPlayer){
         // cari game registered, and update with the number of registered player.
+        for(Game g: fs.getGameList().values()) {
+            if(g.id == game.id) {
+                int maxPlayer = g.getMaxOfPlayers();
+                if(newNumOfPlayer > maxPlayer) {
+                    System.out.println("number of player exceeded the maximum number of player allowed");
+                    break;
+                } else {
+                    game.currentRegisteredPlayers = newNumOfPlayer;
+                    fs.updateGame(game);
+                    System.out.println("updated number of registered player to : " + g.currentRegisteredPlayers);
+                    break;
+                }
+            }
+        }
     }
 
 
