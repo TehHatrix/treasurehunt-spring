@@ -16,6 +16,10 @@ import java.util.Scanner;
 public class FileStore {
 
     private static FileStore instance = null;
+
+    // Static storage
+    public static GameCart gameCart;
+
     // Defaults
     private int gameID = 1;
     private int playerID = 1;
@@ -32,6 +36,7 @@ public class FileStore {
 
         gamesFile = new File(gamesFilename);
         playersFile = new File(playersFilename);
+        gameCart = new GameCart();
 
         // initialize counters
         File file = new File(idStore);
@@ -198,102 +203,108 @@ public class FileStore {
         }
     }
 
-    /**
-     * Gets the list of all players
-     * @return HashMap<id,Player>
-     */
-    public HashMap<Integer,Player> getPlayers() {
-        try {
-            if (playersFile.exists()) {
-                FileInputStream fileInput = new FileInputStream(playersFile);
-                ObjectInputStream reader = new ObjectInputStream(fileInput);
-                HashMap<Integer,Player> players = (HashMap<Integer,Player>) reader.readObject();
-                // Debug logs
-//                System.out.println("[FileStore.java/getPlayers] Players:-");
-//                for (int i = 0; i < players.size(); i++){
-//                    System.out.println(players.values().toArray()[i]);
-//                }
-                return players;
-            } else {
-                System.out.println("[FileStore.java/getPlayers] File not found, creating new one");
-                playersFile.createNewFile();
-                HashMap<Integer,Player> players = new HashMap<>();
-                FileOutputStream fileOutput = new FileOutputStream(playersFile);
-                ObjectOutputStream writer = new ObjectOutputStream(fileOutput);
-                writer.writeObject(players);
-                writer.close();
-                return players;
-            }
-            // Once done, print output
-//            System.out.println("[FileStore.java/getGameList] " + gamesFilename + " : " + s);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
+    public GameCart getCart() {
+        return this.gameCart;
     }
 
-    /**
-     * Adds player
-     * @param player Player Object
-     */
-    public void addPlayer(Player player) {
-        try {
-            // Get the game list ->  array
-            HashMap<Integer,Player> playersList = getPlayers();
-            FileOutputStream fileOutput = new FileOutputStream(playersFile);
-            ObjectOutputStream writer = new ObjectOutputStream(fileOutput);
-            // Add gameObject at the end
-            playersList.put(player.id, player);
-            // Write to file
-            writer.writeObject(playersList);
-            writer.close();
-            System.out.println("[FileStore.java/addPlayer] Added player (ID:" + player.id + ")");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * Updates player
-     * @param player Player Object
-     */
-    public void updatePlayer(Player player) {
-        try {
-            // Get the game list ->  array
-            HashMap<Integer,Player> playersList = getPlayers();
-            FileOutputStream fileOutput = new FileOutputStream(playersFile);
-            ObjectOutputStream writer = new ObjectOutputStream(fileOutput);
-            // Add gameObject at the end
-            playersList.replace(player.id, player);
-            // Write to file
-            writer.writeObject(playersList);
-            writer.close();
-            System.out.println("[FileStore.java/updatePlayer] Updated player (ID:" + player.id + ")");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * Removes player
-     * @param id
-     */
-    public void removePlayer(int id) {
-        try {
-            // Get the game list ->  array
-            HashMap<Integer,Player> playersList = getPlayers();
-            FileOutputStream fileOutput = new FileOutputStream(playersFile);
-            ObjectOutputStream writer = new ObjectOutputStream(fileOutput);
-            // Add gameObject at the end
-            playersList.remove(id);
-            // Write to file
-            writer.writeObject(playersList);
-            writer.close();
-            System.out.println("[FileStore.java/removePlayer] Removed player (ID:" + id + ")");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    /**
+//     * Gets the list of all players
+//     * @return HashMap<id,Player>
+//     */
+//    public HashMap<Integer,Player> getPlayers() {
+//        try {
+//            if (playersFile.exists()) {
+//                FileInputStream fileInput = new FileInputStream(playersFile);
+//                ObjectInputStream reader = new ObjectInputStream(fileInput);
+//                HashMap<Integer,Player> players = (HashMap<Integer,Player>) reader.readObject();
+//                // Debug logs
+////                System.out.println("[FileStore.java/getPlayers] Players:-");
+////                for (int i = 0; i < players.size(); i++){
+////                    System.out.println(players.values().toArray()[i]);
+////                }
+//                return players;
+//            } else {
+//                System.out.println("[FileStore.java/getPlayers] File not found, creating new one");
+//                playersFile.createNewFile();
+//                HashMap<Integer,Player> players = new HashMap<>();
+//                FileOutputStream fileOutput = new FileOutputStream(playersFile);
+//                ObjectOutputStream writer = new ObjectOutputStream(fileOutput);
+//                writer.writeObject(players);
+//                writer.close();
+//                return players;
+//            }
+//            // Once done, print output
+////            System.out.println("[FileStore.java/getGameList] " + gamesFilename + " : " + s);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
+//
+//
+//
+//    /**
+//     * Adds player
+//     * @param player Player Object
+//     */
+//    public void addPlayer(Player player) {
+//        try {
+//            // Get the game list ->  array
+//            HashMap<Integer,Player> playersList = getPlayers();
+//            FileOutputStream fileOutput = new FileOutputStream(playersFile);
+//            ObjectOutputStream writer = new ObjectOutputStream(fileOutput);
+//            // Add gameObject at the end
+//            playersList.put(player.id, player);
+//            // Write to file
+//            writer.writeObject(playersList);
+//            writer.close();
+//            System.out.println("[FileStore.java/addPlayer] Added player (ID:" + player.id + ")");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    /**
+//     * Updates player
+//     * @param player Player Object
+//     */
+//    public void updatePlayer(Player player) {
+//        try {
+//            // Get the game list ->  array
+//            HashMap<Integer,Player> playersList = getPlayers();
+//            FileOutputStream fileOutput = new FileOutputStream(playersFile);
+//            ObjectOutputStream writer = new ObjectOutputStream(fileOutput);
+//            // Add gameObject at the end
+//            playersList.replace(player.id, player);
+//            // Write to file
+//            writer.writeObject(playersList);
+//            writer.close();
+//            System.out.println("[FileStore.java/updatePlayer] Updated player (ID:" + player.id + ")");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    /**
+//     * Removes player
+//     * @param id
+//     */
+//    public void removePlayer(int id) {
+//        try {
+//            // Get the game list ->  array
+//            HashMap<Integer,Player> playersList = getPlayers();
+//            FileOutputStream fileOutput = new FileOutputStream(playersFile);
+//            ObjectOutputStream writer = new ObjectOutputStream(fileOutput);
+//            // Add gameObject at the end
+//            playersList.remove(id);
+//            // Write to file
+//            writer.writeObject(playersList);
+//            writer.close();
+//            System.out.println("[FileStore.java/removePlayer] Removed player (ID:" + id + ")");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 }
 
 

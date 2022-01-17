@@ -107,5 +107,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="libs" level="project" />
+    <orderEntry type="module" module-name="TreasureHuntRegistrationSpring" />
   </component>
 </module>
